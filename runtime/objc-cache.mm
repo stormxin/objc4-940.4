@@ -82,8 +82,8 @@
 #include "objc-private.h"
 
 #if OBJC_USE_ROSETTA
-#include <Rosetta/Traps.h>
-#include <Rosetta/Rosetta.h>
+//#include <Rosetta/Traps.h>
+//#include <Rosetta/Rosetta.h>
 #endif
 
 #if __arm__  ||  __x86_64__  ||  __i386__
@@ -1183,14 +1183,14 @@ static int _collecting_in_critical(void)
 
         // Find out where thread is executing
 #if OBJC_USE_ROSETTA
-        if (&rosetta_is_current_process_translated && rosetta_is_current_process_translated()) {
-            ret = objc_thread_get_rip(threads[count], (uint64_t*)&pc);
-            if (ret != KERN_SUCCESS) {
-                pc = PC_SENTINEL;
-            }
-        } else {
+//        if (&rosetta_is_current_process_translated && rosetta_is_current_process_translated()) {
+//            ret = objc_thread_get_rip(threads[count], (uint64_t*)&pc);
+//            if (ret != KERN_SUCCESS) {
+//                pc = PC_SENTINEL;
+//            }
+//        } else {
             pc = _get_pc_for_thread (threads[count]);
-        }
+//        }
 #else
         pc = _get_pc_for_thread (threads[count]);
 #endif

@@ -42,7 +42,7 @@
 #include <mach/mach.h>
 #include <sys/mman.h>
 
-#include <os/feature_private.h>
+//#include <os/feature_private.h>
 #endif
 
 @interface NSInvocation
@@ -1184,23 +1184,23 @@ public:
 #if TARGET_OS_EXCLAVEKIT
         bool willTerminate = true;
 #else
-        bool willTerminate = (DebugPoolAllocation == Fatal
-                              || sdkIsAtLeast(10_12, 10_0, 10_0, 3_0, 2_0));
+//        bool willTerminate = (DebugPoolAllocation == Fatal
+//                              || sdkIsAtLeast(10_12, 10_0, 10_0, 3_0, 2_0));
 #endif
 
-        if (!complained) {
-            complained = true;
-            _objc_inform_now_and_on_crash
-                ("Invalid or prematurely-freed autorelease pool %p. "
-                 "Set a breakpoint on objc_autoreleasePoolInvalid to debug. ",
-                 token);
-            if (!willTerminate)
-                _objc_inform("Proceeding anyway.  Memory errors are likely.");
-        }
-        objc_autoreleasePoolInvalid(token);
+//        if (!complained) {
+//            complained = true;
+//            _objc_inform_now_and_on_crash
+//                ("Invalid or prematurely-freed autorelease pool %p. "
+//                 "Set a breakpoint on objc_autoreleasePoolInvalid to debug. ",
+//                 token);
+//            if (!willTerminate)
+//                _objc_inform("Proceeding anyway.  Memory errors are likely.");
+//        }
+//        objc_autoreleasePoolInvalid(token);
 
-        if (willTerminate)
-            _objc_fatal("Invalid autorelease pools are a fatal error");
+//        if (willTerminate)
+//            _objc_fatal("Invalid autorelease pools are a fatal error");
     }
 
     template<bool allowDebug>

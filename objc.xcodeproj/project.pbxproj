@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -56,6 +56,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		33A7EFD12E46DA5D00A028CD /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC0630554660B00DB518D /* libobjc.A.dylib */; };
 		393CEAC00DC69E3E000B69DE /* objc-references.mm in Sources */ = {isa = PBXBuildFile; fileRef = 393CEABF0DC69E3E000B69DE /* objc-references.mm */; };
 		393CEAC60DC69E67000B69DE /* objc-references.h in Headers */ = {isa = PBXBuildFile; fileRef = 393CEAC50DC69E67000B69DE /* objc-references.h */; };
 		39ABD72312F0B61800D1054C /* objc-weak.h in Headers */ = {isa = PBXBuildFile; fileRef = 39ABD71F12F0B61800D1054C /* objc-weak.h */; };
@@ -181,6 +182,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33A7EFD32E46DA5D00A028CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC0620554660B00DB518D;
+			remoteInfo = objc;
+		};
 		6EF877F323263D8000963DBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
@@ -240,6 +248,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		33A7EFC82E46DA4100A028CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		6EF877D52325D62600963DBB /* Install Manpages */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +282,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33A7EFCA2E46DA4100A028CD /* objc_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = objc_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		393CEABF0DC69E3E000B69DE /* objc-references.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "objc-references.mm"; path = "runtime/objc-references.mm"; sourceTree = "<group>"; };
 		393CEAC50DC69E67000B69DE /* objc-references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-references.h"; path = "runtime/objc-references.h"; sourceTree = "<group>"; };
 		39ABD71F12F0B61800D1054C /* objc-weak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-weak.h"; path = "runtime/objc-weak.h"; sourceTree = "<group>"; };
@@ -410,7 +428,19 @@
 		F9BCC727205C68E800DD9AFC /* libobjc-trampolines.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libobjc-trampolines.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		33A7EFCB2E46DA4100A028CD /* objc_test */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = objc_test; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		33A7EFC72E46DA4100A028CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A7EFD12E46DA5D00A028CD /* libobjc.A.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EF877D42325D62600963DBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,6 +517,7 @@
 				842581762CEEBB26007C1920 /* ObjectiveCTests */,
 				842581902CEEBC53007C1920 /* ObjectiveC-swiftoverlay-Test-Dylib */,
 				842581802CEEBBEE007C1920 /* ObjectiveC.xctestplan */,
+				33A7EFCB2E46DA4100A028CD /* objc_test */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				F9BCC72A205C6A1600DD9AFC /* Frameworks */,
 			);
@@ -553,6 +584,7 @@
 				84B3DAC72CEE827B009A3DB2 /* libswiftObjectiveC.dylib */,
 				8425816B2CEEB869007C1920 /* ObjectiveCTests.xctest */,
 				842581852CEEBC4B007C1920 /* libObjectiveC-swiftoverlay-Test-Dylib.dylib */,
+				33A7EFCA2E46DA4100A028CD /* objc_test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -850,6 +882,29 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		33A7EFC92E46DA4100A028CD /* objc_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A7EFCE2E46DA4100A028CD /* Build configuration list for PBXNativeTarget "objc_test" */;
+			buildPhases = (
+				33A7EFC62E46DA4100A028CD /* Sources */,
+				33A7EFC72E46DA4100A028CD /* Frameworks */,
+				33A7EFC82E46DA4100A028CD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33A7EFD42E46DA5D00A028CD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				33A7EFCB2E46DA4100A028CD /* objc_test */,
+			);
+			name = objc_test;
+			packageProductDependencies = (
+			);
+			productName = objc_test;
+			productReference = 33A7EFCA2E46DA4100A028CD /* objc_test */;
+			productType = "com.apple.product-type.tool";
+		};
 		6EF877D62325D62600963DBB /* objcdt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EF877DD2325D62600963DBB /* Build configuration list for PBXNativeTarget "objcdt" */;
@@ -994,6 +1049,9 @@
 			attributes = {
 				LastUpgradeCheck = 0440;
 				TargetAttributes = {
+					33A7EFC92E46DA4100A028CD = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					6EF877D62325D62600963DBB = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -1052,6 +1110,7 @@
 				8425816A2CEEB869007C1920 /* ObjectiveCTests */,
 				842581842CEEBC4B007C1920 /* ObjectiveC-swiftoverlay-Test-Dylib */,
 				842AB7322CEF0DF600D7A577 /* objc-vfs-overlay */,
+				33A7EFC92E46DA4100A028CD /* objc_test */,
 			);
 		};
 /* End PBXProject section */
@@ -1081,7 +1140,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -x\nif [ $ACTION = \"installhdrs\" -o $ACTION = \"installapi\" ]; then exit; fi\n/usr/bin/xcrun -sdk macosx.internal clang++ -Wall -mmacosx-version-min=10.12 -arch x86_64 -std=c++11 \"${SRCROOT}/markgc.cpp\" -o \"${BUILT_PRODUCTS_DIR}/markgc\"\n\"${BUILT_PRODUCTS_DIR}/markgc\" \"${BUILT_PRODUCTS_DIR}/libobjc.A.dylib\" \"${CONFIGURATION}\" \"${ENABLE_ADDRESS_SANITIZER}\"\n";
+			shellScript = "set -x\nif [ $ACTION = \"installhdrs\" -o $ACTION = \"installapi\" ]; then exit; fi\n/usr/bin/xcrun -sdk macosx clang++ -Wall -mmacosx-version-min=10.12 -arch x86_64 -std=c++11 \"${SRCROOT}/markgc.cpp\" -o \"${BUILT_PRODUCTS_DIR}/markgc\"\n\"${BUILT_PRODUCTS_DIR}/markgc\" \"${BUILT_PRODUCTS_DIR}/libobjc.A.dylib\" \"${CONFIGURATION}\" \"${ENABLE_ADDRESS_SANITIZER}\"\n";
 		};
 		830F2AFA0D73BC5800392440 /* Run Script (symlink) */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1200,6 +1259,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33A7EFC62E46DA4100A028CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EF877D32325D62600963DBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1306,6 +1372,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		33A7EFD42E46DA5D00A028CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC0620554660B00DB518D /* objc */;
+			targetProxy = 33A7EFD32E46DA5D00A028CD /* PBXContainerItemProxy */;
+		};
 		6EF877F423263D8000963DBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6EF877D62325D62600963DBB /* objcdt */;
@@ -1364,6 +1435,11 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"OS_OBJECT_USE_OBJC=0",
+					"OBJC_IS_DEBUG_BUILD=1",
+					LIBC_NO_LIBCRASHREPORTERCLIENT,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(DSTROOT)$(SYSTEM_PREFIX)/usr/include",
@@ -1373,11 +1449,13 @@
 					"$(CONFIGURATION_BUILD_DIR)$(SYSTEM_PREFIX)/usr/include",
 					"$(CONFIGURATION_BUILD_DIR)$(SYSTEM_PREFIX)/usr/local/include",
 					/System/Library/Frameworks/System.framework/PrivateHeaders,
+					"$(SRCROOT)/PrivateHeaders",
 				);
 				"INCLUDED_SOURCE_FILE_NAMES[sdk=macosx*][arch=i386]" = "dummy-library-mac-i386.c";
 				INSTALL_PATH = "$(SYSTEM_PREFIX)/usr/lib";
 				IS_ZIPPERED = YES;
 				LLVM_LTO = NO;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				OTHER_CFLAGS = (
 					"-fdollars-in-identifiers",
 					"-fno-objc-convert-messages-to-runtime-calls",
@@ -1448,7 +1526,6 @@
 				);
 				"OTHER_LDFLAGS[sdk=macosx*]" = (
 					"$(inherited)",
-					"-lCrashReporterClient",
 					"-lc++abi",
 					"-Xlinker",
 					"-sectalign",
@@ -1458,7 +1535,6 @@
 					__objc_data,
 					"-Xlinker",
 					0x1000,
-					"-lRosetta",
 				);
 				"OTHER_LDFLAGS[sdk=macosx*][arch=i386]" = (
 					"$(inherited)",
@@ -1502,6 +1578,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "$(SYSTEM_PREFIX)/usr/local/include/objc";
 				PRODUCT_NAME = objc.A;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_PREFIX)/usr/include/objc";
+				SDKROOT = macosx;
 				SUPPORTS_TEXT_BASED_API = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(DSTROOT)$(SYSTEM_PREFIX)/usr/local/include",
@@ -1526,6 +1603,11 @@
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=macosx*][arch=i386]" = "*";
 				EXECUTABLE_PREFIX = lib;
 				GCC_CW_ASM_SYNTAX = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"OS_OBJECT_USE_OBJC=0",
+					"NDEBUG=1",
+					LIBC_NO_LIBCRASHREPORTERCLIENT,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(DSTROOT)$(SYSTEM_PREFIX)/usr/include",
@@ -1535,10 +1617,12 @@
 					"$(CONFIGURATION_BUILD_DIR)$(SYSTEM_PREFIX)/usr/include",
 					"$(CONFIGURATION_BUILD_DIR)$(SYSTEM_PREFIX)/usr/local/include",
 					/System/Library/Frameworks/System.framework/PrivateHeaders,
+					"$(SRCROOT)/PrivateHeaders",
 				);
 				"INCLUDED_SOURCE_FILE_NAMES[sdk=macosx*][arch=i386]" = "dummy-library-mac-i386.c";
 				INSTALL_PATH = "$(SYSTEM_PREFIX)/usr/lib";
 				IS_ZIPPERED = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				OTHER_CFLAGS = (
 					"-fdollars-in-identifiers",
 					"-fno-objc-convert-messages-to-runtime-calls",
@@ -1609,7 +1693,6 @@
 				);
 				"OTHER_LDFLAGS[sdk=macosx*]" = (
 					"$(inherited)",
-					"-lCrashReporterClient",
 					"-lc++abi",
 					"-Xlinker",
 					"-sectalign",
@@ -1619,7 +1702,6 @@
 					__objc_data,
 					"-Xlinker",
 					0x1000,
-					"-lRosetta",
 				);
 				"OTHER_LDFLAGS[sdk=macosx*][arch=i386]" = (
 					"$(inherited)",
@@ -1663,6 +1745,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "$(SYSTEM_PREFIX)/usr/local/include/objc";
 				PRODUCT_NAME = objc.A;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_PREFIX)/usr/include/objc";
+				SDKROOT = macosx;
 				SUPPORTS_TEXT_BASED_API = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(DSTROOT)$(SYSTEM_PREFIX)/usr/local/include",
@@ -1690,7 +1773,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "$(RC_ProjectSourceVersion:default=1.0)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = "$(_NOT_$(GCC_SYMBOLS_PRIVATE_EXTERN))";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
@@ -1757,7 +1840,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "$(RC_ProjectSourceVersion:default=1.0)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -1810,6 +1893,105 @@
 			};
 			name = Release;
 		};
+		33A7EFCF2E46DA4100A028CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		33A7EFD02E46DA4100A028CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		6EF877DB2325D62600963DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1825,6 +2007,7 @@
 					/System/Library/Frameworks/System.framework/PrivateHeaders,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -1846,6 +2029,7 @@
 					/System/Library/Frameworks/System.framework/PrivateHeaders,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -1858,6 +2042,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1866,6 +2051,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1875,6 +2061,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59GAB85EFG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1884,6 +2071,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59GAB85EFG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1891,6 +2079,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1898,6 +2087,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1916,6 +2106,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -vfsoverlay \"$(CONFIGURATION_TEMP_DIR)/objc-overlay.yaml\" -Xcc -ivfsoverlay -Xcc \"$(CONFIGURATION_TEMP_DIR)/objc-overlay.yaml\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apple.ObjectiveCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(SWIFT_INCLUDE_PATHS__$(DEPLOYMENT_LOCATION:default=NO))";
 				SWIFT_INCLUDE_PATHS__YES = "$(DSTROOT)$(SYSTEM_PREFIX)/usr/lib/swift";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
@@ -1937,6 +2128,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -vfsoverlay \"$(CONFIGURATION_TEMP_DIR)/objc-overlay.yaml\" -Xcc -ivfsoverlay -Xcc \"$(CONFIGURATION_TEMP_DIR)/objc-overlay.yaml\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apple.ObjectiveCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(SWIFT_INCLUDE_PATHS__$(DEPLOYMENT_LOCATION:default=NO))";
 				SWIFT_INCLUDE_PATHS__YES = "$(DSTROOT)$(SYSTEM_PREFIX)/usr/lib/swift";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
@@ -1954,6 +2146,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				"IS_ZIPPERED[sdk=macosx*]" = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 			};
@@ -1970,6 +2163,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				"IS_ZIPPERED[sdk=macosx*]" = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 			};
@@ -1983,6 +2177,7 @@
 				BASE_DIRECTORY__YES = "$(DSTROOT)";
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1994,6 +2189,7 @@
 				BASE_DIRECTORY__YES = "$(DSTROOT)";
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -2002,6 +2198,7 @@
 			baseConfigurationReference = 84B3DAD52CEE8402009A3DB2 /* ObjectiveC.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -2010,6 +2207,7 @@
 			baseConfigurationReference = 84B3DAD52CEE8402009A3DB2 /* ObjectiveC.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -2065,6 +2263,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -2116,6 +2315,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -2155,6 +2355,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "$(TRAMPOLINES_PRIVATE_HEADERS_PATH)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_PREFIX)/usr/include/objc";
+				SDKROOT = macosx;
 				SKIP_INSTALL = "$(TRAMPOLINES_SKIP_INSTALL)";
 				SUPPORTS_TEXT_BASED_API = "$(TRAMPOLINES_TAPI_ENABLED)";
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -2202,6 +2403,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "$(TRAMPOLINES_PRIVATE_HEADERS_PATH)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_PREFIX)/usr/include/objc";
+				SDKROOT = macosx;
 				SKIP_INSTALL = "$(TRAMPOLINES_SKIP_INSTALL)";
 				SUPPORTS_TEXT_BASED_API = "$(TRAMPOLINES_TAPI_ENABLED)";
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -2233,6 +2435,15 @@
 			buildConfigurations = (
 				1DEB914F08733D8E0010E9CD /* Debug */,
 				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A7EFCE2E46DA4100A028CD /* Build configuration list for PBXNativeTarget "objc_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A7EFCF2E46DA4100A028CD /* Debug */,
+				33A7EFD02E46DA4100A028CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

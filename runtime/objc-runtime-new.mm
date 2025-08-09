@@ -4127,13 +4127,13 @@ void _read_images(mapped_image_info infosParam[], uint32_t hCount, int totalClas
         // (linked before OS X 10.11)
         // Note: we must check for macOS, because Catalyst and Almond apps
         // return false for a Mac SDK check! rdar://78225780
-        if (dyld_get_active_platform() == PLATFORM_MACOS && !dyld_program_sdk_at_least(dyld_platform_version_macOS_10_11)) {
-            DisableNonpointerIsa = On;
-            if (PrintRawIsa) {
-                _objc_inform("RAW ISA: disabling non-pointer isa because "
-                             "the app is too old.");
-            }
-        }
+//        if (dyld_get_active_platform() == PLATFORM_MACOS && !dyld_program_sdk_at_least(dyld_platform_version_macOS_10_11)) {
+//            DisableNonpointerIsa = On;
+//            if (PrintRawIsa) {
+//                _objc_inform("RAW ISA: disabling non-pointer isa because "
+//                             "the app is too old.");
+//            }
+//        }
 #   endif
 
         // Disable non-pointer isa if the app has a __DATA,__objc_rawisa section
@@ -9687,7 +9687,7 @@ initializeTaggedPointerObfuscator(void)
 {
     if (!DisableTaggedPointerObfuscation
 #if !TARGET_OS_EXCLAVEKIT
-        && dyld_program_sdk_at_least(dyld_fall_2018_os_versions)
+        /*&& dyld_program_sdk_at_least(dyld_fall_2018_os_versions)*/
 #endif
         ) {
         // Pull random data into the variable, then shift away all non-payload bits.

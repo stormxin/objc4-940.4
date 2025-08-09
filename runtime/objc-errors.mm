@@ -96,7 +96,7 @@ void _objc_fatal(const char *fmt, ...)
 #include <os/reason_private.h>
 #include <os/variant_private.h>
 
-#include <sandbox/private.h>
+//#include <sandbox/private.h>
 #include <_simple.h>
 
 // Return true if c is a UTF8 continuation byte
@@ -169,11 +169,11 @@ static void _objc_syslog(const char *message)
 {
     bool do_stderr = true;
 
-    if (sandbox_check(getpid(), "network-outbound",
-                      SANDBOX_FILTER_PATH, "/private/var/run/syslog")) {
-        _simple_asl_log(ASL_LEVEL_ERR, nil, message);
-        do_stderr = also_do_stderr();
-    }
+//    if (sandbox_check(getpid(), "network-outbound",
+//                      SANDBOX_FILTER_PATH, "/private/var/run/syslog")) {
+//        _simple_asl_log(ASL_LEVEL_ERR, nil, message);
+//        do_stderr = also_do_stderr();
+//    }
 
     if (do_stderr) {
         write(STDERR_FILENO, message, strlen(message));
